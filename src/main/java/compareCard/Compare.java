@@ -10,6 +10,14 @@ public class Compare {
 
 
     public String compare(Player playerOne, Player playerTwo) {
+        playerOne.setLevel(this.getCardslevel(playerOne));
+        playerTwo.setLevel(this.getCardslevel(playerTwo));
+        if(playerOne.getLevel()>playerTwo.getLevel()){
+            return playerOne.getName();
+        }
+        if(playerOne.getLevel()<playerTwo.getLevel()){
+            return playerTwo.getName();
+        }
         int playerOneMaxCard = 0;
         int playerTwoMaxCard = 0;
         for (Card item : playerOne.getCards()) {
