@@ -30,6 +30,9 @@ public class Compare {
         if(playerOne.getLevel()==3){
             return compareEqualLevelThree(playerOne,playerTwo);
         }
+        if(playerOne.getLevel()==4){
+            return compareEqualLevelFour(playerOne,playerTwo);
+        }
         return "null";
     }
 
@@ -138,6 +141,11 @@ public class Compare {
         }
         return this.compareEqualLevelOne(playerOne,playerTwo);
     }
+
+    public String compareEqualLevelFour(Player playerOne,Player playerTwo){
+        return compareEqualLevelTwo(playerOne,playerTwo);
+    }
+
 
 
     public int getCardslevel(Player player){
