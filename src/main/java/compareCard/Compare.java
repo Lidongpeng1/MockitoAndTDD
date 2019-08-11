@@ -2,26 +2,31 @@ package compareCard;
 
 
 public class Compare {
+
     public String compare(Player playerOne,Player playerTwo){
-        int playerOneMax = 0;
-        int playerTwoMax = 0;
+        int playerOneMaxCard = 0;
+        int playerTwoMaxCard = 0;
         for(Card item:playerOne.getCards()){
-            if(item.getNumber()> playerOneMax){
-                playerOneMax = item.getNumber();
+            if(item.getNumber()> playerOneMaxCard){
+                playerOneMaxCard = item.getNumber();
             }
         }
         for(Card item:playerTwo.getCards()){
-            if(item.getNumber()> playerTwoMax){
-                playerTwoMax = item.getNumber();
+            if(item.getNumber()> playerTwoMaxCard){
+                playerTwoMaxCard = item.getNumber();
             }
         }
 
-        if(playerOneMax > playerTwoMax){
+        if(playerOneMaxCard > playerTwoMaxCard){
             return playerOne.getName();
-        }else if(playerOneMax == playerTwoMax){
+        }else if(playerOneMaxCard == playerTwoMaxCard){
             return "平手";
         }else {
             return playerTwo.getName();
         }
+    }
+
+    public boolean isLevelNine(Player playerOne) {
+
     }
 }
