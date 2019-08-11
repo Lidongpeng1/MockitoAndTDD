@@ -1,6 +1,8 @@
 package compareCard;
 
 
+import org.apache.commons.collections.CollectionUtils;
+
 import java.util.*;
 
 public class Compare {
@@ -22,7 +24,10 @@ public class Compare {
         if(playerOne.getLevel()==1){
             return compareEqualLevelOne(playerOne,playerTwo);
         }
-        return compareEqualLevelOne(playerOne,playerTwo);
+        if(playerOne.getLevel()==2){
+            return compareEqualLevelTwo(playerOne,playerTwo);
+        }
+        return "null";
     }
 
     public String compareEqualLevelOne(Player playerOne,Player playerTwo){
@@ -47,6 +52,34 @@ public class Compare {
                 return playerTwo.getName();
             }
         }
+        return "旗鼓相当的对手";
+    }
+
+    public String compareEqualLevelTwo(Player playerOne,Player playerTwo){
+        List<Integer> playerOneCards = new ArrayList<>();
+        List<Integer> playerTwoCards = new ArrayList<>();
+        for (Card item:playerOne.getCards()){
+            playerOneCards.add(item.getNumber());
+        }
+        for (Card item:playerTwo.getCards()){
+            playerTwoCards.add(item.getNumber());
+        }
+        HashSet<Integer> playerOneCardsBySet = new HashSet<>(playerOneCards);//得到去重后的set集合
+        HashSet<Integer> playerTwoCardsBySet = new HashSet<>(playerTwoCards);
+
+        Collection playerOneCardsByCollection = CollectionUtils.disjunction(playerOneCards,playerOneCardsBySet);//获取去除的重复元素
+        Collection playerTwoCardsByCollection = CollectionUtils.disjunction(playerTwoCards,playerTwoCardsBySet);
+
+        List<Integer> playerOneDoubleCardsNum = new ArrayList<>(playerOneCardsByCollection);
+        List<Integer> playerTwoDoubleCardsNum = new ArrayList<>(playerTwoCardsByCollection);
+
+
+        if(playerOneDoubleCardsNum.get(0) > playerTwoDoubleCardsNum.get(0)){
+                return playerOne.getName();
+            }
+        if(playerOneDoubleCardsNum.get(0) < playerTwoDoubleCardsNum.get(0)){
+                return playerTwo.getName();
+            }
         return "旗鼓相当的对手";
     }
 
