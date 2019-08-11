@@ -135,4 +135,22 @@ public class CompareCardTest {
         Boolean resultlevel = compare.isLevelFive(player);
         Assert.assertEquals(true,resultlevel);
     }
+    @Test
+    public void should_return_level_four_is_true(){
+        List<Card> playerOneCardList = new ArrayList<>();
+        Card card1 = new Card("3C");
+        Card card2 = new Card("3D");
+        Card card3 = new Card("3H");
+        Card card4 = new Card("6S");
+        Card card5 = new Card("7H");
+        playerOneCardList.add(card1);
+        playerOneCardList.add(card2);
+        playerOneCardList.add(card3);
+        playerOneCardList.add(card4);
+        playerOneCardList.add(card5);
+        Player player = new Player("player",playerOneCardList);
+        Compare compare = new Compare();
+        Boolean resultlevel = compare.isLevelfour(player);
+        Assert.assertEquals(true,resultlevel);
+    }
 }
