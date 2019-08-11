@@ -42,6 +42,12 @@ public class Compare {
         if(playerOne.getLevel()==7){
             return compareEqualLevelSeven(playerOne,playerTwo);
         }
+        if(playerOne.getLevel()==8){
+            return compareEqualLevelEight(playerOne,playerTwo);
+        }
+        if(playerOne.getLevel()==9){
+            return compareEqualLevelNine(playerOne,playerTwo);
+        }
         return "null";
     }
 
@@ -225,6 +231,13 @@ public class Compare {
         return "null";
     }
 
+    public String compareEqualLevelEight(Player playerOne,Player playerTwo){
+        return compareEqualLevelTwo(playerOne,playerTwo);
+    }
+
+    public String compareEqualLevelNine(Player playerOne,Player playerTwo){
+        return compareEqualLevelOne(playerOne,playerTwo);
+    }
 
 
 
