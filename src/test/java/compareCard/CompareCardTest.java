@@ -86,7 +86,7 @@ public class CompareCardTest {
         Card card1 = new Card(5,"5S");
         Card card2 = new Card(5,"5H");
         Card card3 = new Card(5,"5H");
-        Card card4 = new Card(9,"5H");
+        Card card4 = new Card(9,"9H");
         Card card5 = new Card(9,"9H");
         playerOneCardList.add(card1);
         playerOneCardList.add(card2);
@@ -99,5 +99,23 @@ public class CompareCardTest {
         Boolean resultlevel = compare.isLevelSeven(player);
         Assert.assertEquals(true,resultlevel);
     }
-
+//    @Test
+//    public void should_return_level_six_is_true(){
+//        List<Card> playerOneCardList = new ArrayList<>();
+//        Card card1 = new Card(3,"3H");
+//        Card card2 = new Card(4,"4H");
+//        Card card3 = new Card(5,"5H");
+//        Card card4 = new Card(7,"7H");
+//        Card card5 = new Card(9,"9H");
+//        playerOneCardList.add(card1);
+//        playerOneCardList.add(card2);
+//        playerOneCardList.add(card3);
+//        playerOneCardList.add(card4);
+//        playerOneCardList.add(card5);
+//        Player player = new Player("player",playerOneCardList);
+//
+//        Compare compare = new Compare();
+//        Boolean resultlevel = compare.isLevelSix(player);
+//        Assert.assertEquals(true,resultlevel);
+//    }
 }
