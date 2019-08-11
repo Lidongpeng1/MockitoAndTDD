@@ -18,27 +18,39 @@ public class Compare {
         if(playerOne.getLevel()<playerTwo.getLevel()){
             return playerTwo.getName();
         }
-        int playerOneMaxCard = 0;
-        int playerTwoMaxCard = 0;
-        for (Card item : playerOne.getCards()) {
-            if (item.getNumber() > playerOneMaxCard) {
-                playerOneMaxCard = item.getNumber();
-            }
-        }
-        for (Card item : playerTwo.getCards()) {
-            if (item.getNumber() > playerTwoMaxCard) {
-                playerTwoMaxCard = item.getNumber();
-            }
-        }
-
-        if (playerOneMaxCard > playerTwoMaxCard) {
-            return playerOne.getName();
-        } else if (playerOneMaxCard == playerTwoMaxCard) {
-            return "平手";
-        } else {
-            return playerTwo.getName();
-        }
+            return compareEqualLevel(playerOne,playerTwo);
+//        int playerOneMaxCard = 0;
+//        int playerTwoMaxCard = 0;
+//        for (Card item : playerOne.getCards()) {
+//            if (item.getNumber() > playerOneMaxCard) {
+//                playerOneMaxCard = item.getNumber();
+//            }
+//        }
+//        for (Card item : playerTwo.getCards()) {
+//            if (item.getNumber() > playerTwoMaxCard) {
+//                playerTwoMaxCard = item.getNumber();
+//            }
+//        }
+//
+//        if (playerOneMaxCard > playerTwoMaxCard) {
+//            return playerOne.getName();
+//        } else if (playerOneMaxCard == playerTwoMaxCard) {
+//            return "平手";
+//        } else {
+//            return playerTwo.getName();
+//        }
     }
+    public String compareEqualLevel(Player playerOne,Player playerTwo){
+        if(playerOne.getLevel()==1){
+            return compareEqualLevelOne(playerOne,playerTwo);
+        }
+        return compareEqualLevelOne(playerOne,playerTwo);
+    }
+
+    public String compareEqualLevelOne(Player playerOne,Player playerTwo){
+        return playerOne.getName();
+    }
+
 
     public int getCardslevel(Player player){
         if(this.isLevelNine(player)){return 9;}
