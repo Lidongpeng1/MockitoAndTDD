@@ -27,6 +27,9 @@ public class Compare {
         if(playerOne.getLevel()==2){
             return compareEqualLevelTwo(playerOne,playerTwo);
         }
+        if(playerOne.getLevel()==3){
+            return compareEqualLevelThree(playerOne,playerTwo);
+        }
         return "null";
     }
 
@@ -80,7 +83,60 @@ public class Compare {
         if(playerOneDoubleCardsNum.get(0) < playerTwoDoubleCardsNum.get(0)){
                 return playerTwo.getName();
             }
-        return "旗鼓相当的对手";
+        return this.compareEqualLevelOne(playerOne,playerTwo);//等级二的对子相同则调用等级一的比较方法
+    }
+
+    public String compareEqualLevelThree(Player playerOne,Player playerTwo){
+        int playerOneMaxDouble = 0;
+        int playerOneMinDouble = 0;
+        int playerTwoMaxDouble = 0;
+        int playerTwoMinDouble = 0;
+        List<Integer> playerOneCards = new ArrayList<>();
+        List<Integer> playerTwoCards = new ArrayList<>();
+        for (Card item:playerOne.getCards()){
+            playerOneCards.add(item.getNumber());
+        }
+        for (Card item:playerTwo.getCards()){
+            playerTwoCards.add(item.getNumber());
+        }
+        HashSet<Integer> playerOneCardsBySet = new HashSet<>(playerOneCards);//得到去重后的set集合
+        HashSet<Integer> playerTwoCardsBySet = new HashSet<>(playerTwoCards);
+
+        Collection playerOneCardsByCollection = CollectionUtils.disjunction(playerOneCards,playerOneCardsBySet);//获取去除的重复元素
+        Collection playerTwoCardsByCollection = CollectionUtils.disjunction(playerTwoCards,playerTwoCardsBySet);
+
+        List<Integer> playerOneDoubleCardsNum = new ArrayList<>(playerOneCardsByCollection);
+        List<Integer> playerTwoDoubleCardsNum = new ArrayList<>(playerTwoCardsByCollection);
+
+        if(playerOneDoubleCardsNum.get(0) > playerOneDoubleCardsNum.get(1)){
+            playerOneMaxDouble = playerOneDoubleCardsNum.get(0);
+            playerOneMinDouble = playerOneDoubleCardsNum.get(1);
+        }else {
+            playerOneMaxDouble = playerOneDoubleCardsNum.get(1);
+            playerOneMinDouble = playerOneDoubleCardsNum.get(0);
+        }
+
+        if(playerTwoDoubleCardsNum.get(0) > playerTwoDoubleCardsNum.get(1)){
+            playerTwoMaxDouble = playerTwoDoubleCardsNum.get(0);
+            playerTwoMinDouble = playerTwoDoubleCardsNum.get(1);
+        }else {
+            playerTwoMaxDouble = playerTwoDoubleCardsNum.get(1);
+            playerTwoMinDouble = playerTwoDoubleCardsNum.get(0);
+        }
+
+        if(playerOneMaxDouble>playerTwoMaxDouble){
+            return playerOne.getName();
+        }
+        if(playerOneMaxDouble<playerTwoMaxDouble){
+            return playerTwo.getName();
+        }
+        if(playerOneMinDouble>playerTwoMinDouble){
+            return playerOne.getName();
+        }
+        if(playerOneMinDouble<playerTwoMinDouble){
+            return playerTwo.getName();
+        }
+        return this.compareEqualLevelOne(playerOne,playerTwo);
     }
 
 
