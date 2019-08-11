@@ -49,8 +49,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/compareCard/CompareCardTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="179" column="36" lean-forward="true" selection-start-line="179" selection-start-column="36" selection-end-line="179" selection-end-column="36" />
+            <state relative-caret-position="338">
+              <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -70,11 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/compareCard/Compare.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="205" column="9" lean-forward="true" selection-start-line="205" selection-start-column="9" selection-end-line="205" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="164">
+              <caret line="41" column="54" lean-forward="true" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
             </state>
           </provider>
         </entry>
@@ -82,8 +79,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/compareCard/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+            <state relative-caret-position="263">
+              <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
               <folding>
                 <element signature="e#157#158#0" expanded="true" />
                 <element signature="e#185#186#0" expanded="true" />
@@ -266,38 +263,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.CompareCardTest.should_return_level_two_is_true">
-    <configuration name="CompareCardTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="junit_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="compareCard.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="compareCard" />
-      <option name="MAIN_CLASS_NAME" value="compareCard.CompareCardTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CompareCardTest.should_return_level_five_is_true" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="junit_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="compareCard.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="compareCard" />
-      <option name="MAIN_CLASS_NAME" value="compareCard.CompareCardTest" />
-      <option name="METHOD_NAME" value="should_return_level_five_is_true" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.CompareCardTest.should_return_winner_is_playerOne_By_equalLevelOne">
     <configuration name="CompareCardTest.should_return_level_four_is_three" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit_test" />
       <extension name="coverage">
@@ -314,7 +280,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CompareCardTest.should_return_level_four_is_true" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CompareCardTest.should_return_level_is_one" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="junit_test" />
       <extension name="coverage">
         <pattern>
@@ -324,7 +290,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="compareCard" />
       <option name="MAIN_CLASS_NAME" value="compareCard.CompareCardTest" />
-      <option name="METHOD_NAME" value="should_return_level_four_is_true" />
+      <option name="METHOD_NAME" value="should_return_level_is_one" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -346,13 +312,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CompareCardTest.should_return_winner_is_playerOne_By_equalLevelOne" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="junit_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="compareCard.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="compareCard" />
+      <option name="MAIN_CLASS_NAME" value="compareCard.CompareCardTest" />
+      <option name="METHOD_NAME" value="should_return_winner_is_playerOne_By_equalLevelOne" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CompareCardTest.should_return_winner_is_playerOne_By_level" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="junit_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="compareCard.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="compareCard" />
+      <option name="MAIN_CLASS_NAME" value="compareCard.CompareCardTest" />
+      <option name="METHOD_NAME" value="should_return_winner_is_playerOne_By_level" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CompareCardTest.should_return_winner_is_playerOne_By_equalLevelOne" />
+        <item itemvalue="JUnit.CompareCardTest.should_return_winner_is_playerOne_By_level" />
+        <item itemvalue="JUnit.CompareCardTest.should_return_level_is_one" />
         <item itemvalue="JUnit.CompareCardTest.should_return_level_two_is_true" />
         <item itemvalue="JUnit.CompareCardTest.should_return_level_four_is_three" />
-        <item itemvalue="JUnit.CompareCardTest.should_return_level_four_is_true" />
-        <item itemvalue="JUnit.CompareCardTest.should_return_level_five_is_true" />
-        <item itemvalue="JUnit.CompareCardTest" />
       </list>
     </recent_temporary>
   </component>
@@ -367,7 +365,7 @@
       <option name="presentableId" value="Default" />
       <updated>1565328730621</updated>
       <workItem from="1565493530399" duration="824000" />
-      <workItem from="1565507538848" duration="13159000" />
+      <workItem from="1565507538848" duration="16855000" />
     </task>
     <task id="LOCAL-00001" summary="给玩家添加了一个牌的level，并编写了测试对于牌型是否等于level=9同花顺进行判断，测试编译成功运行不通过，下一步写实现">
       <created>1565510819782</created>
@@ -432,43 +430,71 @@
       <option name="project" value="LOCAL" />
       <updated>1565525851656</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="完成了判断等级是否为一个对子level=2">
+      <created>1565526030006</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1565526030006</updated>
+    </task>
+    <task id="LOCAL-00011" summary="完成getlevel方法，可以获取所有牌型的等级">
+      <created>1565526831943</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1565526831943</updated>
+    </task>
+    <task id="LOCAL-00012" summary="实现了根据等级来判断牌型的大小">
+      <created>1565527589046</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1565527589046</updated>
+    </task>
+    <task id="LOCAL-00013" summary="编写了两副牌等级均为1时的比较测试">
+      <created>1565528336009</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1565528336009</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CompareCardTest_should_return_level_five_is_true - 2019.08.11 at 18h 33m 10s.xml">
-      <configuration name="CompareCardTest.should_return_level_five_is_true" configurationId="JUnit" />
+    <history-entry file="CompareCardTest_should_return_level_is_one - 2019.08.11 at 20h 31m 53s.xml">
+      <configuration name="CompareCardTest.should_return_level_is_one" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CompareCardTest_should_return_level_five_is_true - 2019.08.11 at 18h 33m 20s.xml">
-      <configuration name="CompareCardTest.should_return_level_five_is_true" configurationId="JUnit" />
+    <history-entry file="CompareCardTest_should_return_level_is_one - 2019.08.11 at 20h 32m 10s.xml">
+      <configuration name="CompareCardTest.should_return_level_is_one" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CompareCardTest_should_return_level_four_is_true - 2019.08.11 at 18h 38m 45s.xml">
-      <configuration name="CompareCardTest.should_return_level_four_is_true" configurationId="JUnit" />
+    <history-entry file="CompareCardTest_should_return_level_is_one - 2019.08.11 at 20h 32m 22s.xml">
+      <configuration name="CompareCardTest.should_return_level_is_one" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CompareCardTest_should_return_level_four_is_true - 2019.08.11 at 18h 38m 56s.xml">
-      <configuration name="CompareCardTest.should_return_level_four_is_true" configurationId="JUnit" />
+    <history-entry file="CompareCardTest_should_return_level_is_one - 2019.08.11 at 20h 32m 41s.xml">
+      <configuration name="CompareCardTest.should_return_level_is_one" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CompareCardTest_should_return_level_four_is_three - 2019.08.11 at 18h 42m 29s.xml">
-      <configuration name="CompareCardTest.should_return_level_four_is_three" configurationId="JUnit" />
+    <history-entry file="CompareCardTest_should_return_level_is_one - 2019.08.11 at 20h 33m 11s.xml">
+      <configuration name="CompareCardTest.should_return_level_is_one" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CompareCardTest_should_return_level_four_is_three - 2019.08.11 at 18h 42m 46s.xml">
-      <configuration name="CompareCardTest.should_return_level_four_is_three" configurationId="JUnit" />
+    <history-entry file="CompareCardTest_should_return_winner_is_playerOne_By_level - 2019.08.11 at 20h 45m 56s.xml">
+      <configuration name="CompareCardTest.should_return_winner_is_playerOne_By_level" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CompareCardTest_should_return_level_four_is_three - 2019.08.11 at 20h 15m 55s.xml">
-      <configuration name="CompareCardTest.should_return_level_four_is_three" configurationId="JUnit" />
+    <history-entry file="CompareCardTest_should_return_winner_is_playerOne_By_equalLevelOne - 2019.08.11 at 20h 57m 50s.xml">
+      <configuration name="CompareCardTest.should_return_winner_is_playerOne_By_equalLevelOne" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CompareCardTest_should_return_level_four_is_three - 2019.08.11 at 20h 16m 28s.xml">
-      <configuration name="CompareCardTest.should_return_level_four_is_three" configurationId="JUnit" />
+    <history-entry file="CompareCardTest_should_return_winner_is_playerOne_By_equalLevelOne - 2019.08.11 at 21h 20m 51s.xml">
+      <configuration name="CompareCardTest.should_return_winner_is_playerOne_By_equalLevelOne" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CompareCardTest_should_return_level_four_is_three - 2019.08.11 at 20h 17m 00s.xml">
-      <configuration name="CompareCardTest.should_return_level_four_is_three" configurationId="JUnit" />
+    <history-entry file="CompareCardTest_should_return_winner_is_playerOne_By_equalLevelOne - 2019.08.11 at 21h 21m 13s.xml">
+      <configuration name="CompareCardTest.should_return_winner_is_playerOne_By_equalLevelOne" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="CompareCardTest_should_return_level_two_is_true - 2019.08.11 at 20h 19m 54s.xml">
-      <configuration name="CompareCardTest.should_return_level_two_is_true" configurationId="JUnit" />
+    <history-entry file="CompareCardTest_should_return_winner_is_playerOne_By_equalLevelOne - 2019.08.11 at 21h 21m 36s.xml">
+      <configuration name="CompareCardTest.should_return_winner_is_playerOne_By_equalLevelOne" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13983000" />
+    <option name="totallyTimeSpent" value="17679000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -483,14 +509,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18196721" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.13770492" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.13770492" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.29344264" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3295082" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32786885" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
@@ -545,7 +571,11 @@
     <MESSAGE value="完成了判断等级是否为同花level=6,与是否为顺子level=5" />
     <MESSAGE value="完成了判断等级是否为三个对子level=4" />
     <MESSAGE value="完成了判断等级是否为两个对子level=3" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成了判断等级是否为两个对子level=3" />
+    <MESSAGE value="完成了判断等级是否为一个对子level=2" />
+    <MESSAGE value="完成getlevel方法，可以获取所有牌型的等级" />
+    <MESSAGE value="实现了根据等级来判断牌型的大小" />
+    <MESSAGE value="编写了两副牌等级均为1时的比较测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="编写了两副牌等级均为1时的比较测试" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -720,27 +750,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/compareCard/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-          <folding>
-            <element signature="e#157#158#0" expanded="true" />
-            <element signature="e#185#186#0" expanded="true" />
-            <element signature="e#228#229#0" expanded="true" />
-            <element signature="e#262#263#0" expanded="true" />
-            <element signature="e#248#249#0" expanded="true" />
-            <element signature="e#275#276#0" expanded="true" />
-            <element signature="e#315#316#0" expanded="true" />
-            <element signature="e#347#348#0" expanded="true" />
-            <element signature="e#383#384#0" expanded="true" />
-            <element signature="e#411#412#0" expanded="true" />
-            <element signature="e#457#458#0" expanded="true" />
-            <element signature="e#491#492#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/compareCard/Card.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -758,20 +767,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/compareCard/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+          <folding>
+            <element signature="e#157#158#0" expanded="true" />
+            <element signature="e#185#186#0" expanded="true" />
+            <element signature="e#228#229#0" expanded="true" />
+            <element signature="e#262#263#0" expanded="true" />
+            <element signature="e#248#249#0" expanded="true" />
+            <element signature="e#275#276#0" expanded="true" />
+            <element signature="e#315#316#0" expanded="true" />
+            <element signature="e#347#348#0" expanded="true" />
+            <element signature="e#383#384#0" expanded="true" />
+            <element signature="e#411#412#0" expanded="true" />
+            <element signature="e#457#458#0" expanded="true" />
+            <element signature="e#491#492#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/compareCard/Compare.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="205" column="9" lean-forward="true" selection-start-line="205" selection-start-column="9" selection-end-line="205" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="164">
+          <caret line="41" column="54" lean-forward="true" selection-start-line="41" selection-start-column="54" selection-end-line="41" selection-end-column="54" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/compareCard/CompareCardTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="179" column="36" lean-forward="true" selection-start-line="179" selection-start-column="36" selection-end-line="179" selection-end-column="36" />
+        <state relative-caret-position="338">
+          <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

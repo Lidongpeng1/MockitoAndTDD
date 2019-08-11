@@ -1,10 +1,7 @@
 package compareCard;
 
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 public class Compare {
 
@@ -12,34 +9,15 @@ public class Compare {
     public String compare(Player playerOne, Player playerTwo) {
         playerOne.setLevel(this.getCardslevel(playerOne));
         playerTwo.setLevel(this.getCardslevel(playerTwo));
-        if(playerOne.getLevel()>playerTwo.getLevel()){
+        if (playerOne.getLevel() > playerTwo.getLevel()) {
             return playerOne.getName();
         }
-        if(playerOne.getLevel()<playerTwo.getLevel()){
+        if (playerOne.getLevel() < playerTwo.getLevel()) {
             return playerTwo.getName();
         }
-            return compareEqualLevel(playerOne,playerTwo);
-//        int playerOneMaxCard = 0;
-//        int playerTwoMaxCard = 0;
-//        for (Card item : playerOne.getCards()) {
-//            if (item.getNumber() > playerOneMaxCard) {
-//                playerOneMaxCard = item.getNumber();
-//            }
-//        }
-//        for (Card item : playerTwo.getCards()) {
-//            if (item.getNumber() > playerTwoMaxCard) {
-//                playerTwoMaxCard = item.getNumber();
-//            }
-//        }
-//
-//        if (playerOneMaxCard > playerTwoMaxCard) {
-//            return playerOne.getName();
-//        } else if (playerOneMaxCard == playerTwoMaxCard) {
-//            return "平手";
-//        } else {
-//            return playerTwo.getName();
-//        }
+        return compareEqualLevel(playerOne, playerTwo);
     }
+
     public String compareEqualLevel(Player playerOne,Player playerTwo){
         if(playerOne.getLevel()==1){
             return compareEqualLevelOne(playerOne,playerTwo);
@@ -48,7 +26,28 @@ public class Compare {
     }
 
     public String compareEqualLevelOne(Player playerOne,Player playerTwo){
-        return playerOne.getName();
+        List<Integer> playerOneCards = new ArrayList<>();
+        List<Integer> playerTwoCards = new ArrayList<>();
+        for (Card item:playerOne.getCards()){
+            playerOneCards.add(item.getNumber());
+        }
+        for (Card item:playerTwo.getCards()){
+            playerTwoCards.add(item.getNumber());
+        }
+        Collections.sort(playerOneCards);
+        Collections.sort(playerTwoCards);
+        Collections.reverse(playerOneCards);
+        Collections.reverse(playerTwoCards);
+
+        for(int i=0;i <= playerOneCards.size()-1;i++){
+            if(playerOneCards.get(i) > playerTwoCards.get(i)){
+                return playerOne.getName();
+            }
+            if(playerOneCards.get(i) < playerTwoCards.get(i)){
+                return playerTwo.getName();
+            }
+        }
+        return "旗鼓相当的对手";
     }
 
 

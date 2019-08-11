@@ -106,22 +106,24 @@ public class CompareCardTest {
         playerOneCardList.add(card5);
         Player playerOne = new Player("playerOne", playerOneCardList);
         List<Card> playerTwoCardList = new ArrayList<>();
-        Card card6 = new Card("7C");
+        Card card6 = new Card("5H");
         Card card7 = new Card("8D");
         Card card8 = new Card("9H");
         Card card9 = new Card("TD");
         Card card10 = new Card("3S");
-        playerTwoCardList.add(card6);
-        playerTwoCardList.add(card7);
-        playerTwoCardList.add(card8);
-        playerTwoCardList.add(card9);
-        playerTwoCardList.add(card10);
+        playerTwoCardList.add(card1);
+        playerTwoCardList.add(card2);
+        playerTwoCardList.add(card3);
+        playerTwoCardList.add(card4);
+        playerTwoCardList.add(card5);
         Player playerTwo = new Player("playerTwo", playerTwoCardList);
 
         Compare compare = new Compare();
         String result = compare.compare(playerOne, playerTwo);
-        Assert.assertEquals("playerOne", result);
+        Assert.assertEquals("旗鼓相当的对手", result);
     }
+
+
 
     @Test
     public void should_return_level_nine_is_true(){
