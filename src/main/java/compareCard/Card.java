@@ -1,8 +1,8 @@
 package compareCard;
 
 public class Card {
-    Integer Number;
-    String StringNumber;
+    private Integer Number;
+    private String StringNumber;
 
     public Card(Integer number, String stringNumber) {
         Number = number;
