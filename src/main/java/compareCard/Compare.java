@@ -8,6 +8,7 @@ import java.util.Set;
 
 public class Compare {
 
+
     public String compare(Player playerOne, Player playerTwo) {
         int playerOneMaxCard = 0;
         int playerTwoMaxCard = 0;
@@ -29,6 +30,18 @@ public class Compare {
         } else {
             return playerTwo.getName();
         }
+    }
+
+    public int getCardslevel(Player player){
+        if(this.isLevelNine(player)){return 9;}
+        if(this.isLevelEight(player)){return 8;}
+        if(this.isLevelSeven(player)){return 7;}
+        if(this.isLevelSix(player)){return 6;}
+        if(this.isLevelFive(player)){return 5;}
+        if(this.isLevelfour(player)){return 4;}
+        if(this.isLevelThree(player)){return 3;}
+        if(this.isLevelTwo(player)){return 2;}
+        return 1;
     }
 
     public boolean isLevelNine(Player player) {

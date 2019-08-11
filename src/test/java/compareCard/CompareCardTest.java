@@ -11,11 +11,11 @@ public class CompareCardTest {
     @Test
     public void should_return_winner_is_PlayerOne(){
         List<Card> playerOneCardList = new ArrayList<>();
-        Card card1 = new Card(5,"5H");
-        Card card2 = new Card(6,"6H");
-        Card card3 = new Card(8,"8C");
-        Card card4 = new Card(9,"9D");
-        Card card5 = new Card(14,"AS");
+        Card card1 = new Card("5H");
+        Card card2 = new Card("6H");
+        Card card3 = new Card("8C");
+        Card card4 = new Card("9D");
+        Card card5 = new Card("AS");
         playerOneCardList.add(card1);
         playerOneCardList.add(card2);
         playerOneCardList.add(card3);
@@ -23,11 +23,11 @@ public class CompareCardTest {
         playerOneCardList.add(card5);
         Player playerOne = new Player("playerOne",playerOneCardList);
         List<Card> playerTwoCardList = new ArrayList<>();
-        Card card6 = new Card(6,"6C");
-        Card card7 = new Card(8,"8D");
-        Card card8 = new Card(9,"9H");
-        Card card9 = new Card(10,"TD");
-        Card card10 = new Card(7,"7S");
+        Card card6 = new Card("6C");
+        Card card7 = new Card("8D");
+        Card card8 = new Card("9H");
+        Card card9 = new Card("TD");
+        Card card10 = new Card("7S");
         playerTwoCardList.add(card6);
         playerTwoCardList.add(card7);
         playerTwoCardList.add(card8);
@@ -38,6 +38,25 @@ public class CompareCardTest {
         Compare compare = new Compare();
         String result = compare.compare(playerOne,playerTwo);
         Assert.assertEquals("playerOne",result);
+    }
+
+    @Test
+    public void should_return_level_is_one(){
+        List<Card> playerOneCardList = new ArrayList<>();
+        Card card1 = new Card("5H");
+        Card card2 = new Card("6H");
+        Card card3 = new Card("8C");
+        Card card4 = new Card("9D");
+        Card card5 = new Card("AS");
+        playerOneCardList.add(card1);
+        playerOneCardList.add(card2);
+        playerOneCardList.add(card3);
+        playerOneCardList.add(card4);
+        playerOneCardList.add(card5);
+        Player playerOne = new Player("playerOne",playerOneCardList);
+        Compare compare = new Compare();
+        int result = compare.getCardslevel(playerOne);
+        Assert.assertEquals(1,result);
     }
 
     @Test
