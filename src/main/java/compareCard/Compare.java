@@ -27,6 +27,6 @@ public class Compare {
     }
 
     public boolean isLevelNine(Player playerOne) {
-
+        return false;
     }
 }

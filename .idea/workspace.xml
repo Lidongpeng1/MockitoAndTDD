@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="866e7a28-ada3-46e8-a75d-53de62bc5068" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/compareCard/Compare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/compareCard/Compare.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/compareCard/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/compareCard/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/compareCard/CompareCardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/compareCard/CompareCardTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -48,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/compareCard/CompareCardTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="179">
-              <caret line="43" column="51" lean-forward="true" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
+            <state relative-caret-position="148">
+              <caret line="58" column="58" lean-forward="true" selection-start-line="58" selection-start-column="58" selection-end-line="58" selection-end-column="58" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -69,11 +66,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/compareCard/Compare.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="266">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+              <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+              <folding>
+                <element signature="e#818#819#0" expanded="true" />
+                <element signature="e#845#846#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -160,8 +161,8 @@
         <option value="$PROJECT_DIR$/src/test/java/parking/VipParkingStrategyTestAnswer.java" />
         <option value="$PROJECT_DIR$/src/main/java/compareCard/Card.java" />
         <option value="$PROJECT_DIR$/src/main/java/compareCard/Player.java" />
-        <option value="$PROJECT_DIR$/src/main/java/compareCard/Compare.java" />
         <option value="$PROJECT_DIR$/src/test/java/compareCard/CompareCardTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/compareCard/Compare.java" />
       </list>
     </option>
   </component>
@@ -367,8 +368,16 @@
       <option name="presentableId" value="Default" />
       <updated>1565328730621</updated>
       <workItem from="1565493530399" duration="824000" />
-      <workItem from="1565507538848" duration="1538000" />
+      <workItem from="1565507538848" duration="1749000" />
     </task>
+    <task id="LOCAL-00001" summary="给玩家添加了一个牌的level，并编写了测试对于牌型是否等于level=9同花顺进行判断，测试编译成功运行不通过，下一步写实现">
+      <created>1565510819782</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1565510819782</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -404,7 +413,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2362000" />
+    <option name="totallyTimeSpent" value="2573000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -419,7 +428,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2147541" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.2147541" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -427,7 +436,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32936078" />
+      <window_info anchor="bottom" id="Messages" order="10" visible="true" weight="0.32786885" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -471,6 +480,10 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="给玩家添加了一个牌的level，并编写了测试对于牌型是否等于level=9同花顺进行判断，测试编译成功运行不通过，下一步写实现" />
+    <option name="LAST_COMMIT_MESSAGE" value="给玩家添加了一个牌的level，并编写了测试对于牌型是否等于level=9同花顺进行判断，测试编译成功运行不通过，下一步写实现" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -683,19 +696,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/compareCard/Compare.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/compareCard/CompareCardTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="148">
+          <caret line="58" column="58" lean-forward="true" selection-start-line="58" selection-start-column="58" selection-end-line="58" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/compareCard/CompareCardTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/compareCard/Compare.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="43" column="51" lean-forward="true" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
+        <state relative-caret-position="266">
+          <caret line="29" column="21" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#818#819#0" expanded="true" />
+            <element signature="e#845#846#0" expanded="true" />
           </folding>
         </state>
       </provider>
