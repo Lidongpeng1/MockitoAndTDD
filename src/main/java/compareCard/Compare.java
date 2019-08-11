@@ -39,6 +39,9 @@ public class Compare {
         if(playerOne.getLevel()==6){
             return compareEqualLevelSix(playerOne,playerTwo);
         }
+        if(playerOne.getLevel()==7){
+            return compareEqualLevelSeven(playerOne,playerTwo);
+        }
         return "null";
     }
 
@@ -159,6 +162,69 @@ public class Compare {
     public String compareEqualLevelSix(Player playerOne,Player playerTwo){
         return compareEqualLevelOne(playerOne,playerTwo);
     }
+
+    public String compareEqualLevelSeven(Player playerOne,Player playerTwo){
+        int playerOneCardCount = 0;//为了查看谁是三张牌的
+        int playerTwoCardCount = 0;
+        List<Integer> playerOneCards = new ArrayList<>();
+        List<Integer> playerTwoCards = new ArrayList<>();
+        for (Card item:playerOne.getCards()){
+            playerOneCards.add(item.getNumber());
+        }
+        for (Card item:playerTwo.getCards()){
+            playerTwoCards.add(item.getNumber());
+        }
+        HashSet<Integer> playerOneCardsBySet = new HashSet<>(playerOneCards);//得到去重后的set集合
+        HashSet<Integer> playerTwoCardsBySet = new HashSet<>(playerTwoCards);
+
+        List<Integer> playerOneCardsNorepeat = new ArrayList<>(playerOneCardsBySet);//将去重的元素放在list中方便取出
+        List<Integer> playerTwoCardsNorepeat = new ArrayList<>(playerTwoCardsBySet);
+
+        for(Integer item:playerOneCards){
+            if(item == playerOneCardsNorepeat.get(0)){
+                playerOneCardCount++;//玩家一set中第一个元素的重复次数
+            }
+        }
+        for(Integer item:playerTwoCards){
+            if(item == playerTwoCardsNorepeat.get(0)){
+                playerTwoCardCount++;//玩家二set中第一个元素的重复次数
+            }
+        }
+        if(playerOneCardCount == 3 && playerTwoCardCount == 3) {
+            if (playerOneCardsNorepeat.get(0) > playerTwoCardsNorepeat.get(0)) {
+                return playerOne.getName();
+            }
+            if (playerOneCardsNorepeat.get(0) < playerTwoCardsNorepeat.get(0)) {
+                return playerTwo.getName();
+            }
+        }
+        if(playerOneCardCount == 2 && playerTwoCardCount == 3) {
+            if (playerOneCardsNorepeat.get(1) > playerTwoCardsNorepeat.get(0)) {
+                return playerOne.getName();
+            }
+            if (playerOneCardsNorepeat.get(1) < playerTwoCardsNorepeat.get(0)) {
+                return playerTwo.getName();
+            }
+        }
+        if(playerOneCardCount == 3 && playerTwoCardCount == 2) {
+            if (playerOneCardsNorepeat.get(0) > playerTwoCardsNorepeat.get(1)) {
+                return playerOne.getName();
+            }
+            if (playerOneCardsNorepeat.get(0) < playerTwoCardsNorepeat.get(1)) {
+                return playerTwo.getName();
+            }
+        }
+        if(playerOneCardCount == 2 && playerTwoCardCount == 2) {
+            if (playerOneCardsNorepeat.get(1) > playerTwoCardsNorepeat.get(1)) {
+                return playerOne.getName();
+            }
+            if (playerOneCardsNorepeat.get(1) < playerTwoCardsNorepeat.get(1)) {
+                return playerTwo.getName();
+            }
+        }
+        return "null";
+    }
+
 
 
 

@@ -283,6 +283,38 @@ public class CompareCardTest {
         Assert.assertEquals("playerTwo", result);
     }
 
+    @Test
+    public void should_return_winner_is_playerOne_By_equalLevelSeven(){
+        List<Card> playerOneCardList = new ArrayList<>();
+        Card card1 = new Card("3C");
+        Card card2 = new Card("3H");
+        Card card3 = new Card("3S");
+        Card card4 = new Card("4H");
+        Card card5 = new Card("4H");
+        playerOneCardList.add(card1);
+        playerOneCardList.add(card2);
+        playerOneCardList.add(card3);
+        playerOneCardList.add(card4);
+        playerOneCardList.add(card5);
+        Player playerOne = new Player("playerOne", playerOneCardList);
+        List<Card> playerTwoCardList = new ArrayList<>();
+        Card card6 = new Card("8C");
+        Card card7 = new Card("8C");
+        Card card8 = new Card("8H");
+        Card card9 = new Card("4C");
+        Card card10 = new Card("4S");
+        playerTwoCardList.add(card6);
+        playerTwoCardList.add(card7);
+        playerTwoCardList.add(card8);
+        playerTwoCardList.add(card9);
+        playerTwoCardList.add(card10);
+        Player playerTwo = new Player("playerTwo", playerTwoCardList);
+
+        Compare compare = new Compare();
+        String result = compare.compare(playerOne, playerTwo);
+        Assert.assertEquals("playerTwo", result);
+    }
+
 
     @Test
     public void should_return_level_nine_is_true(){
