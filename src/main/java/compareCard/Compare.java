@@ -81,4 +81,30 @@ public class Compare {
         }
         return true;
     }
+
+    public Boolean isLevelSeven(Player player) {
+        List<Integer> cardsNumber = new ArrayList<>();
+        int setNumOneCount = 0;
+        int setNumTwoCount = 0;
+        for (Card item : player.getCards()) {
+            cardsNumber.add(item.getNumber());
+        }
+        HashSet<Integer> noequalSet = new HashSet<>(cardsNumber);//set自动删除重复元素
+        List<Integer> noequalList = new ArrayList<>(noequalSet);//重新给list方便取值
+        if(noequalSet.size()!=2){
+            return false;
+        }
+        for(Integer item:cardsNumber){
+            if(item == noequalList.get(0)){
+                setNumOneCount++;
+            }
+            if(item == noequalList.get(1)){
+                setNumTwoCount++;
+            }
+        }
+        if(setNumOneCount != 3 && setNumTwoCount !=3){
+            return false;
+        }
+        return true;
+    }
 }

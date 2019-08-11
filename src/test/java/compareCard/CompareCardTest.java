@@ -53,7 +53,7 @@ public class CompareCardTest {
         playerOneCardList.add(card3);
         playerOneCardList.add(card4);
         playerOneCardList.add(card5);
-        Player playerOne = new Player("playerOne",playerOneCardList);
+        Player playerOne = new Player("player",playerOneCardList);
 
         Compare compare = new Compare();
         Boolean resultlevel = compare.isLevelNine(playerOne);
@@ -73,10 +73,30 @@ public class CompareCardTest {
         playerOneCardList.add(card3);
         playerOneCardList.add(card4);
         playerOneCardList.add(card5);
-        Player playerOne = new Player("playerOne",playerOneCardList);
+        Player player = new Player("player",playerOneCardList);
 
         Compare compare = new Compare();
-        Boolean resultlevel = compare.isLevelEight(playerOne);
+        Boolean resultlevel = compare.isLevelEight(player);
+        Assert.assertEquals(true,resultlevel);
+    }
+
+    @Test
+    public void should_return_level_seven_is_true(){
+        List<Card> playerOneCardList = new ArrayList<>();
+        Card card1 = new Card(5,"5S");
+        Card card2 = new Card(5,"5H");
+        Card card3 = new Card(5,"5H");
+        Card card4 = new Card(9,"5H");
+        Card card5 = new Card(9,"9H");
+        playerOneCardList.add(card1);
+        playerOneCardList.add(card2);
+        playerOneCardList.add(card3);
+        playerOneCardList.add(card4);
+        playerOneCardList.add(card5);
+        Player player = new Player("player",playerOneCardList);
+
+        Compare compare = new Compare();
+        Boolean resultlevel = compare.isLevelSeven(player);
         Assert.assertEquals(true,resultlevel);
     }
 
