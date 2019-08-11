@@ -197,4 +197,17 @@ public class Compare {
         }
         return true;
     }
+
+    public Boolean isLevelTwo(Player player) {
+        List<Integer> cardsNumber = new ArrayList<>();
+
+        for (Card item : player.getCards()) {
+            cardsNumber.add(item.getNumber());
+        }
+        HashSet<Integer> noequalSet = new HashSet<>(cardsNumber);//set自动删除重复元素
+        if (noequalSet.size() != 4) {
+            return false;
+        }
+        return true;
+    }
 }
