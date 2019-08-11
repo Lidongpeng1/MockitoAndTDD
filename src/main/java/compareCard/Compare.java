@@ -84,26 +84,54 @@ public class Compare {
 
     public Boolean isLevelSeven(Player player) {
         List<Integer> cardsNumber = new ArrayList<>();
-        int setNumOneCount = 0;
-        int setNumTwoCount = 0;
         for (Card item : player.getCards()) {
             cardsNumber.add(item.getNumber());
         }
         HashSet<Integer> noequalSet = new HashSet<>(cardsNumber);//set自动删除重复元素
-        List<Integer> noequalList = new ArrayList<>(noequalSet);//重新给list方便取值
         if(noequalSet.size()!=2){
             return false;
         }
+        int setNumberOneCount = 0;
+        int setNumberTwoCount = 0;
+        List<Integer> noequalList = new ArrayList<>(noequalSet);//重新给list方便取值
         for(Integer item:cardsNumber){
             if(item == noequalList.get(0)){
-                setNumOneCount++;
+                setNumberOneCount++;
             }
             if(item == noequalList.get(1)){
-                setNumTwoCount++;
+                setNumberTwoCount++;
             }
         }
-        if(setNumOneCount != 3 && setNumTwoCount !=3){
+        if(setNumberOneCount != 3 && setNumberTwoCount !=3){
             return false;
+        }
+        return true;
+    }
+
+    public Boolean isLevelSix(Player player) {
+        List<String> cardsStringNumbers = new ArrayList<>();
+        for (Card item : player.getCards()) {
+            cardsStringNumbers.add(item.getStringNumber());
+        }
+        for (String item:cardsStringNumbers){  //判断花色是否一样
+            if(!cardsStringNumbers.get(0).substring(1).equals(item.substring(1))){
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public Boolean isLevelFive(Player player) {
+        int cardSize = player.getCards().size();
+        List<Integer> cardsNumber = new ArrayList<>();
+        for (Card item : player.getCards()) {
+            cardsNumber.add(item.getNumber());
+        }
+//        boolean isSame = cardsStringNumbers.stream().allMatch(cardsStringNumber -> cardsStringNumber.substring(1).equals(cardsStringNumbers.get(0).substring(1)));
+        for (int k = 0; k <= cardSize - 2; k++) {  //判断是否为顺子
+            if (cardsNumber.get(k)+1 != cardsNumber.get(k+1)) {
+                return false;
+            }
         }
         return true;
     }
