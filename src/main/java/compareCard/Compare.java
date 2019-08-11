@@ -33,6 +33,9 @@ public class Compare {
         if(playerOne.getLevel()==4){
             return compareEqualLevelFour(playerOne,playerTwo);
         }
+        if(playerOne.getLevel()==5){
+            return compareEqualLevelFive(playerOne,playerTwo);
+        }
         return "null";
     }
 
@@ -144,6 +147,10 @@ public class Compare {
 
     public String compareEqualLevelFour(Player playerOne,Player playerTwo){
         return compareEqualLevelTwo(playerOne,playerTwo);
+    }
+
+    public String compareEqualLevelFive(Player playerOne,Player playerTwo){
+        return compareEqualLevelOne(playerOne,playerTwo);
     }
 
 
